@@ -32,17 +32,3 @@ text(
   xpd = NA,
   cex = 0.5
   )
-
-
-
-# Usando GGPLOT
-library('ggplot2')
-ggplot(data = COVID19, mapping = aes(x = DATES, y = CONFIRMED)) +
-  geom_point() +
-  geom_smooth(stat = 'smooth', method = 'glm', formula = DATES ~ CONFIRMED) +
-  labs(
-    title = "Casos confirmados, recuperados y muertes por el COVID-19",
-    x = "",
-    y = "Casos registrados"
-  ) + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
